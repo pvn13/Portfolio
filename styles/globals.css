@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { @apply scroll-smooth bg-neutral-950 text-neutral-100; }
+a { @apply text-indigo-400 hover:underline; }
+.btn-primary { @apply px-6 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-lg text-white inline-block transition; }
