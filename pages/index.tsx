@@ -6,7 +6,7 @@ import { BackgroundBeams } from "../components/ui/background-beams";
 import { TypewriterEffect } from "../components/ui/typewriter";
 
 const tagline =
-  "Delivering performant, user-first mobile experiences worldwide.";
+  "Delivering performant, user-centric mobile experiences worldwide.";
 
 const parentVariants = {
   hidden: {},
