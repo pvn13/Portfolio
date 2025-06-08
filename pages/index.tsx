@@ -4,11 +4,12 @@ import { HeroHighlight } from "../components/ui/hero-highlight";
 import { CardSpotlight } from "../components/ui/card-spotlight";
 import { BackgroundBeams } from "../components/ui/background-beams";
 import { TypewriterEffect } from "../components/ui/typewriter";
+import { TargetAndTransition } from "motion/dist/react";
 
 const tagline =
   "Delivering performant, user-centric mobile experiences worldwide.";
 
-const parentVariants = {
+const parentVariants: Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -18,6 +19,14 @@ const parentVariants = {
       repeatDelay: 1.8,
     },
   },
+};
+
+type Variant = TargetAndTransition;
+/**
+ * @public
+ */
+type Variants = {
+  [key: string]: Variant;
 };
 
 const wordVariants = {

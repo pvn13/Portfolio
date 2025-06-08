@@ -43,9 +43,9 @@ export function CardSpotlight({
       role={onClick ? "button" : undefined}
       tabIndex={onClick ? 0 : undefined}
       onClick={onClick}
-      onKeyDown={(e) => {
-        if (onClick && (e.key === "Enter" || e.key === " ")) onClick(e);
-      }}
+      // onKeyDown={(e) => {
+      //   if (onClick && (e.key === "Enter" || e.key === " ")) onClick(e);
+      // }}
       className={cn(
         "relative rounded-xl border border-neutral-700 bg-neutral-900 p-6 group overflow-hidden",
         onClick && "cursor-pointer hover:shadow-lg transition-shadow",
