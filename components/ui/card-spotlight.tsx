@@ -46,12 +46,12 @@ export function CardSpotlight({
       // onKeyDown={(e) => {
       //   if (onClick && (e.key === "Enter" || e.key === " ")) onClick(e);
       // }}
-      onMouseMove={handleMouseMove}
       className={cn(
         "relative rounded-xl border border-neutral-700 bg-neutral-900 p-6 group overflow-hidden",
         onClick && "cursor-pointer hover:shadow-lg transition-shadow",
         className
       )}
+      onMouseMove={handleMouseMove}
     >
       {/* Gradient spotlight */}
       <motion.div
