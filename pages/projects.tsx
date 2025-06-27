@@ -2,19 +2,31 @@ import Head from 'next/head'
 import { CardSpotlight } from '../components/ui/card-spotlight'
 
 const projects = [
-  {
-    title: 'Performance Monitor',
-    desc: 'Real‑time dashboard for memory / FPS tracking.',
+    {
+    title: 'PokerBaazi (Baazi Games)',
+    desc: 'Built a dev-mode performance monitor and reduced bundle size by 13 MB through WebP image optimization.',
   },
   {
-    title: 'Fantasy Soccer League',
-    desc: 'Cross‑platform app with live fixtures.',
+    title: 'Fantasy Soccer League (VectoScalar)',
+    desc: 'Developed Matches and Preview module with custom SVG card components, implemented automated testing, and utilized WebSockets for real-time data updates.',
   },
   {
-    title: 'ShopScalar',
-    desc: 'Headless e‑commerce storefront built with Next.js.',
+    title: 'API Monitoring Tool (VectoScalar)',
+    desc: 'Led a team to enhance code quality, finalize UI/UX, and developed reusable components with schema-based CRUD functionality.',
   },
-]
+  {
+    title: 'PokerBoss (Baazi Games)',
+    desc: 'Utilized Storybook for component development, implemented reusable Form components, and designed dynamic, theme-adaptive SVGs.',
+  },
+  {
+    title: 'ShopScalar App/Admin (VectoScalar)',
+    desc: 'Built robust project infrastructure with Firebase Login, Analytics, and push notifications, and utilized AWS S3 for image storage.',
+  },
+  {
+    title: 'Hikinjo (Beam Melody, UK)',
+    desc: 'Increased user engagement by incorporating Dynamic links, implemented Consume and Provide modules, and refined the Date-Time picker.',
+  },
+];
 
 export default function Projects() {
   return (
