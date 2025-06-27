@@ -105,6 +105,13 @@ export default function Home() {
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8">
+            <CardSpotlight>
+            <h3 className="text-xl font-medium mb-2">React Native</h3>
+            <p>
+              Building scalable, performant mobile apps with a focus on UX and performance.
+            </p>
+          </CardSpotlight>
+
           <CardSpotlight>
             <h3 className="text-xl font-medium mb-2">React &amp; Next.js</h3>
             <p>
@@ -118,8 +125,13 @@ export default function Home() {
           </CardSpotlight>
 
           <CardSpotlight>
-            <h3 className="text-xl font-medium mb-2">Motion &amp; GSAP</h3>
-            <p>Crafting fluid micro-interactions that delight users.</p>
+            <h3 className="text-xl font-medium mb-2">JavaScript</h3>
+            <p>The versatile language of the web, enabling dynamic and interactive experiences across platforms.</p>
+          </CardSpotlight>
+
+          <CardSpotlight>
+            <h3 className="text-xl font-medium mb-2">Animations</h3>
+            <p>Enhancing user experiences with smooth, intuitive, and delightful interface motion.</p>
           </CardSpotlight>
         </div>
       </section>
