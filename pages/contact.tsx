@@ -1,10 +1,12 @@
 import Head from "next/head";
 import { CardSpotlight } from "../components/ui/card-spotlight";
 import { IconPhone, IconMail, IconBrandLinkedin } from "@tabler/icons-react";
+import { BackgroundBeams } from "../components/ui/background-beams";
 
 export default function Contact() {
   return (
     <>
+    <BackgroundBeams />
       <Head>
         <title>Contact – Praveen Verma</title>
       </Head>

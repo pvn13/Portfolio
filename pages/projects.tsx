@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { CardSpotlight } from '../components/ui/card-spotlight'
+import { BackgroundBeams } from '../components/ui/background-beams';
 
 const projects = [
     {
@@ -31,6 +32,7 @@ const projects = [
 export default function Projects() {
   return (
     <>
+    <BackgroundBeams />
       <Head><title>Projects – Praveen Verma</title></Head>
       <main className="mx-auto max-w-5xl px-4 py-24">
         <h1 className="text-4xl font-bold mb-12 text-center">Projects</h1>
