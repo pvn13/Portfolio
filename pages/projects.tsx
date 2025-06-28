@@ -65,13 +65,13 @@ export default function Projects() {
         <h1 className="text-4xl font-bold mb-12 text-center">Projects</h1>
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((p) => { 
-            const words = p.desc.split(" ");
+            const words = p.title.split(" ");
           return (
             <CardSpotlight key={p.title}>
-              <h3 className="text-2xl font-semibold mb-2">{p.title}</h3>
-              <motion.p
+              {/* <h3 className="text-2xl font-semibold mb-2">{p.title}</h3> */}
+              <motion.h3
                           className="
-                            drop-shadow-sm
+                            text-2xl font-semibold mb-2
                           "
                           variants={parentVariants}
                           initial="hidden"
@@ -86,7 +86,8 @@ export default function Projects() {
                               {word}
                             </motion.span>
                           ))}
-                        </motion.p>
+                        </motion.h3>
+                         <p className="text-neutral-300">{p.desc}</p>
             </CardSpotlight>
           )})}
         </div>
