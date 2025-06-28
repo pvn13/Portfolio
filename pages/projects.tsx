@@ -1,6 +1,21 @@
 import Head from 'next/head'
+import { motion, TargetAndTransition } from "framer-motion";
 import { CardSpotlight } from '../components/ui/card-spotlight'
 import { BackgroundBeams } from '../components/ui/background-beams';
+
+type Variant = TargetAndTransition;
+/**
+ * @public
+ */
+type Variants = {
+  [key: string]: Variant;
+};
+
+const wordVariants = {
+  hidden: { opacity: 0, y: 6 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.45 } },
+};
+
 
 const projects = [
     {
@@ -29,6 +44,18 @@ const projects = [
   },
 ];
 
+const parentVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+      repeat: Infinity,
+      repeatType: "reverse",
+      repeatDelay: 1.8,
+    },
+  },
+};
+
 export default function Projects() {
   return (
     <>
@@ -37,12 +64,31 @@ export default function Projects() {
       <main className="mx-auto max-w-5xl px-4 py-24">
         <h1 className="text-4xl font-bold mb-12 text-center">Projects</h1>
         <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((p) => (
+          {projects.map((p) => { 
+            const words = p.desc.split(" ");
+          return (
             <CardSpotlight key={p.title}>
               <h3 className="text-2xl font-semibold mb-2">{p.title}</h3>
-              <p className="text-neutral-300">{p.desc}</p>
+              <motion.p
+                          className="
+                            drop-shadow-sm
+                          "
+                          variants={parentVariants}
+                          initial="hidden"
+                          animate="visible"
+                        >
+                          {words.map((word, i) => (
+                            <motion.span
+                              key={i}
+                              variants={wordVariants}
+                              className="mx-1 inline-block"
+                            >
+                              {word}
+                            </motion.span>
+                          ))}
+                        </motion.p>
             </CardSpotlight>
-          ))}
+          )})}
         </div>
       </main>
     </>
